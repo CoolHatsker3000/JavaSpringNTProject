@@ -13,16 +13,16 @@ import java.sql.SQLException;
 @Component
 public class TariffDAO extends OperationsServiceImpl<TariffEntity> {
 
-    private static RowMapper<TariffEntity> rm=new RowMapper<TariffEntity>() {
+    private static RowMapper<TariffEntity> rowMapper=new RowMapper<TariffEntity>() {
         public TariffEntity mapRow(ResultSet resultSet, int i) throws SQLException {
             return new TariffEntity(resultSet.getInt("TARIFF_ID"), resultSet.getString("TARIFF_NAME"));
         }
     };
-    private static TabMapper tm=new TabMapper("TARIFFS", new String[] {"TARIFF_ID"},new String[]{"TARIFF_NAME"});
+    private static TabMapper tabMapper=new TabMapper("TARIFFS", new String[] {"TARIFF_ID"},new String[]{"TARIFF_NAME"});
 
     @Autowired
     public TariffDAO(DataSource dataSource) {
-        super(new JdbcTemplate(dataSource), rm, tm);
+        super(new JdbcTemplate(dataSource), rowMapper, tabMapper);
     }
 
     Object[] getDataToCreate(TariffEntity obj) {

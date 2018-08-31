@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.9">
+    <root id="1">
+      <ServerVersion>11.2.0.2</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="ME">
+      <ObjectId>50</ObjectId>
+      <IntrospectionTimestamp>2018-08-26.17:17:48</IntrospectionTimestamp>
+      <CreatedTimestamp>2018-08-26.17:09:18</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="SYSTEM">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="OUTLN">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="DIP">
+      <ObjectId>14</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="ORACLE_OCM">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="DBSNMP">
+      <ObjectId>29</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="APPQOSSYS">
+      <ObjectId>30</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="CTXSYS">
+      <ObjectId>32</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="XDB">
+      <ObjectId>34</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="ANONYMOUS">
+      <ObjectId>35</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="MDSYS">
+      <ObjectId>42</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="HR">
+      <ObjectId>43</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="FLOWS_FILES">
+      <ObjectId>44</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>45</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="APEX_040000">
+      <ObjectId>47</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="TESTDB">
+      <ObjectId>48</ObjectId>
+    </schema>
+    <schema id="20" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <sequence id="21" parent="2" name="TARIFFS_SEQUENCE">
+      <ObjectId>21400</ObjectId>
+      <CreatedTimestamp>2018-08-26.17:09:18</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:09:18</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="22" parent="2" name="TARIFFS">
+      <ObjectId>21403</ObjectId>
+      <CreatedTimestamp>2018-08-26.17:14:48</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="23" parent="2" name="TARIFF_ATTRS">
+      <ObjectId>21406</ObjectId>
+      <CreatedTimestamp>2018-08-26.17:14:49</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="24" parent="2" name="TARIFF_INFO">
+      <ObjectId>21408</ObjectId>
+      <CreatedTimestamp>2018-08-26.17:14:49</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="25" parent="2" name="USERS">
+      <ObjectId>21409</ObjectId>
+      <CreatedTimestamp>2018-08-26.17:14:49</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="26" parent="2" name="USER_TARIFF">
+      <ObjectId>21411</ObjectId>
+      <CreatedTimestamp>2018-08-26.17:14:49</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <column id="27" parent="22" name="TARIFF_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="22" name="TARIFF_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+    </column>
+    <index id="29" parent="22" name="SYS_C007401">
+      <ObjectId>21404</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-08-26.17:14:48</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:14:48</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>TARIFF_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="30" parent="22" name="SYS_C007402">
+      <ObjectId>21405</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-08-26.17:14:48</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:14:48</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>TARIFF_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="31" parent="22" name="SYS_C007401">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2018-08-26.17:14:48</ModifiedTimestamp>
+      <ColNames>TARIFF_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C007401</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="32" parent="22" name="SYS_C007402">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2018-08-26.17:14:48</ModifiedTimestamp>
+      <ColNames>TARIFF_NAME</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C007402</UnderlyingIndexName>
+    </key>
+    <trigger id="33" parent="22" name="TARIFFS_TO_INSERT">
+      <ObjectId>21402</ObjectId>
+      <DependsOnIds>21400,117</DependsOnIds>
+      <CreatedTimestamp>2018-08-26.17:14:49</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="34" parent="23" name="ATTR_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="23" name="ATTR_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+    </column>
+    <index id="36" parent="23" name="ATTRIBUTES_PK">
+      <ObjectId>21407</ObjectId>
+      <CreatedTimestamp>2018-08-26.17:14:49</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ATTR_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="23" name="ATTRIBUTES_PK">
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <ColNames>ATTR_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>ATTRIBUTES_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="24" name="TARIFF_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="24" name="ATTR_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="24" name="ATTR_V">
+      <Position>3</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="41" parent="24" name="TARIFF_INFO_FK_TARIFFS">
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <ColNames>TARIFF_ID</ColNames>
+      <RefSchemaName>ME</RefSchemaName>
+      <RefTableName>TARIFFS</RefTableName>
+      <RefKeyName>SYS_C007401</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="42" parent="24" name="TARIFF_INFO_FK_ATTRIBUTES">
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <ColNames>ATTR_ID</ColNames>
+      <RefSchemaName>ME</RefSchemaName>
+      <RefTableName>TARIFF_ATTRS</RefTableName>
+      <RefKeyName>ATTRIBUTES_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="43" parent="25" name="USER_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="25" name="USER_PASSWORD">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="25" name="USER_BALANCE">
+      <Position>3</Position>
+      <DataType>NUMBER(7,2 digit)|0s</DataType>
+      <DefaultExpression>0
+</DefaultExpression>
+    </column>
+    <index id="46" parent="25" name="USERS_PK">
+      <ObjectId>21410</ObjectId>
+      <CreatedTimestamp>2018-08-26.17:14:49</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>USER_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="47" parent="25" name="USERS_PK">
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <ColNames>USER_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>USERS_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="48" parent="26" name="USER_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="26" name="TARIFF_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="50" parent="26" name="USERS_TARIFFS_FK_USERS">
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>ME</RefSchemaName>
+      <RefTableName>USERS</RefTableName>
+      <RefKeyName>USERS_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="51" parent="26" name="USERS_TARIFFS_FK_TARIFFS">
+      <ModifiedTimestamp>2018-08-26.17:14:49</ModifiedTimestamp>
+      <ColNames>TARIFF_ID</ColNames>
+      <RefSchemaName>ME</RefSchemaName>
+      <RefTableName>TARIFFS</RefTableName>
+      <RefKeyName>SYS_C007401</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>

@@ -1,5 +1,7 @@
 package entity;
 
+import models.TariffAttr;
+
 public class TariffAttrEntity {
     private int attrId;
     private String attrName;
@@ -9,6 +11,10 @@ public class TariffAttrEntity {
         this.attrName = attrName;
     }
 
+    public TariffAttrEntity(TariffAttr tariffAttr){
+        this.attrId=Integer.parseInt(tariffAttr.getAttrId());
+        this.attrName=tariffAttr.getAttrName();
+    }
     public int getAttrId() {
         return attrId;
     }

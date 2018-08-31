@@ -16,21 +16,32 @@ public class UserService extends AbstractService<User, UserEntity> {
     }
 
     @Override
-    UserEntity ModelToEntity(User user) {
+    protected UserEntity ModelToEntity(User user) {
         return new UserEntity(user);
     }
 
     @Override
-    User EntityToModel(UserEntity userEntity) {
+    protected User EntityToModel(UserEntity userEntity) {
         User user=new User();
+        if (userEntity==null){
+            return user;
+        }
         user.setUserId(String.valueOf(userEntity.getUserId()));
+        user.setUserPassword(userEntity.getUserPassword());
         user.setUserBalance(String.valueOf(userEntity.getUserBalance()));
         return user;
     }
 
     @Override
-    long getId(User user) {
+    protected long getId(User user) {
         return Long.valueOf(user.getUserId());
+    }
+
+    public User selectUser(User user){
+        user.setUserBalance("0.0");
+        UserDAO dao=(UserDAO) this.currentDAO;
+        User result=EntityToModel(dao.selectUser(ModelToEntity(user)));
+        return result;
     }
 
 

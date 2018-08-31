@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public abstract class AbstractService<Model, Entity> {
-    private final OperationsServiceImpl<Entity> currentDAO;
+    protected final OperationsServiceImpl<Entity> currentDAO;
     public AbstractService(OperationsServiceImpl<Entity> osi){
         currentDAO=osi;
     }
@@ -22,6 +22,7 @@ public abstract class AbstractService<Model, Entity> {
     public void delete(Model model){
         currentDAO.delete(getId(model));
     }
+    public void delete(long id){currentDAO.delete(id);}
     public List<Model> getAll(){
         List<Entity> entityList = currentDAO.getAll();
         List<Model> modelList=new LinkedList<Model>();
@@ -31,9 +32,10 @@ public abstract class AbstractService<Model, Entity> {
         }
         return modelList;
     }
-    public Model getById(Model model){
-         return EntityToModel(currentDAO.getByID(getId(model)));
+    public Model getById(long id){
+         return EntityToModel(currentDAO.getByID(id));
     }
+    public Model getById(Model model){return EntityToModel(currentDAO.getByID(getId(model)));}
 
 
 

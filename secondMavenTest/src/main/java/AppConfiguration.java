@@ -15,7 +15,6 @@ public class AppConfiguration {
         DriverManagerDataSource dmds = new DriverManagerDataSource();
         dmds.setDriverClassName("oracle.jdbc.driver.OracleDriver");
         dmds.setUrl("jdbc:oracle:thin://@localhost:1521/XE");
-        System.out.println("jdbc:oracle:thin:@localhost:1521:XE");
         dmds.setUsername("ME");
         dmds.setPassword("ME");
         return dmds;

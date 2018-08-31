@@ -16,7 +16,7 @@ public class QueryConstructor {
         StringBuilder builder=new StringBuilder("INSERT INTO ");
         builder.append(tab.getTabName());
         builder.append(" VALUES (");
-        int rowLen=tab.getColumns().length;
+        int rowLen=tab.getColumns().length+tab.getIdColumns().length-1;
         for (int i=0;i<rowLen;i++){
             builder.append("?, ");
         }
@@ -44,4 +44,11 @@ public class QueryConstructor {
         builder.append(getWhereStatement(tab.getIdColumns()));
         return builder.toString();
     }
+    public static String getSelect(TabMapper tab){
+        StringBuilder builder=new StringBuilder("SELECT * FROM ");
+        builder.append(tab.getTabName());
+        builder.append(getWhereStatement(tab.getColumns()));
+        return builder.toString();
+    }
+
 }
